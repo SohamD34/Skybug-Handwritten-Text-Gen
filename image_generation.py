@@ -12,8 +12,8 @@ def create_image(sentences):
 
     symbols = ['.']
 
-    fig, axes = plt.subplots(num_sentence, max_len, figsize=(max_len,num_sentence*15))
-    plt.subplots_adjust(wspace=0, hspace=-0.1)
+    fig, axes = plt.subplots(num_sentence, max_len, figsize=(max_len,num_sentence))
+    plt.subplots_adjust(wspace=0, hspace=0)
 
     for j in range(num_sentence):
 
@@ -41,11 +41,6 @@ def create_image(sentences):
 
             axes[j,i].axis('off')
 
-    plt.show()
-    plt.tight_layout()
+    fig.tight_layout(w_pad=-1,h_pad=1)
+    print("Image saved at data/generated_image.png")
     return fig
-
-# text = ['Hello World', 'lorem ipsum','Jay Shree Ram','Jai Hanuman','Jai Bajrang Bali','Jai Shree Krishna']
-# fig = create_image(text)
-# plt.imshow(fig)
-# plt.show()
