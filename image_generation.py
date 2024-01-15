@@ -13,7 +13,7 @@ def create_image(sentences):
     symbols = ['.']
 
     fig, axes = plt.subplots(num_sentence, max_len, figsize=(max_len,num_sentence))
-    plt.subplots_adjust(wspace=0, hspace=0)
+    # plt.subplots_adjust(wspace=0, hspace=0)
 
     for j in range(num_sentence):
 
@@ -42,5 +42,5 @@ def create_image(sentences):
             axes[j,i].axis('off')
 
     fig.tight_layout(w_pad=-1,h_pad=1)
-    print("Image saved at data/generated_image.png")
+
     return fig
